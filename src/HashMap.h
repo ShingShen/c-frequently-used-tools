@@ -15,14 +15,14 @@ struct HashNode {
 typedef struct {
     struct HashNode** hashTable;
     int size;
-} MyHashMap;
+} HashMap;
 
-int getIndex(int key);
-MyHashMap* myHashMapCreate();
-void myHashMapPut(MyHashMap* obj, int key, int value);
-int myHashMapGet(MyHashMap* obj, int key);
-void myHashMapRemove(MyHashMap* obj, int key);
-void myHashMapFree(MyHashMap* obj);
-void printHashMap(MyHashMap* obj);
+extern int getIndex();
+extern HashMap* hashMapCreate();
+extern void hashMapPut();
+extern int hashMapGet();
+extern void hashMapRemove();
+extern void hashMapFree();
+extern void printHashMap();
 
 #endif

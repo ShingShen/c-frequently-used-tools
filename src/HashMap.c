@@ -4,14 +4,14 @@ int getIndex(int key) {
     return (abs(key) % HASH_SIZE);
 }
 
-MyHashMap* myHashMapCreate() {
-    MyHashMap* obj = (MyHashMap*)calloc(1, sizeof(MyHashMap));
+HashMap* hashMapCreate() {
+    HashMap* obj = (HashMap*)calloc(1, sizeof(HashMap));
     obj->hashTable = (struct HashNode**)calloc(HASH_SIZE, sizeof(struct HashNode*));
     obj->size = HASH_SIZE;
     return obj;
 }
 
-void myHashMapPut(MyHashMap* obj, int key, int value) {
+void hashMapPut(HashMap* obj, int key, int value) {
     int index = getIndex(key);
     struct HashNode* curList = obj->hashTable[index];
     struct HashNode* preNode = NULL;
@@ -37,7 +37,7 @@ void myHashMapPut(MyHashMap* obj, int key, int value) {
     return;
 }
 
-int myHashMapGet(MyHashMap* obj, int key) {
+int hashMapGet(HashMap* obj, int key) {
     int index = getIndex(key);
     struct HashNode* curList = obj->hashTable[index];
     
@@ -50,7 +50,7 @@ int myHashMapGet(MyHashMap* obj, int key) {
     return -1;
 }
 
-void myHashMapRemove(MyHashMap* obj, int key) {
+void hashMapRemove(HashMap* obj, int key) {
     int index = getIndex(key);
     struct HashNode* curList = obj->hashTable[index];
     struct HashNode* preNode = NULL;
@@ -72,7 +72,7 @@ void myHashMapRemove(MyHashMap* obj, int key) {
     return;
 }
 
-void myHashMapFree(MyHashMap* obj) {
+void hashMapFree(HashMap* obj) {
     for (int i = 0; i < obj->size; i++) {
         struct HashNode* curList = obj->hashTable[i];
         while (curList) {
@@ -87,7 +87,7 @@ void myHashMapFree(MyHashMap* obj) {
     return;
 }
 
-void printHashMap(MyHashMap* obj) {
+void printHashMap(HashMap* obj) {
     if(obj->hashTable == NULL) return;
     
     for (int i = 0; i < obj->size; i++) {
