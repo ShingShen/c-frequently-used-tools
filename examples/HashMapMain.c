@@ -1,4 +1,4 @@
-#include "../src/HashMap.h"
+#include "../lib/HashMap.h"
 
 int main(void)
 {

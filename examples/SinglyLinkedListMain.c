@@ -1,4 +1,4 @@
-#include "../src/SinglyLinkedList.h"
+#include "../lib/SinglyLinkedList.h"
 
 int main(void) {
     puts("Create Linked List:");

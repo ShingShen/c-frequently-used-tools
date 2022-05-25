@@ -1,6 +1,6 @@
 buildEx:
-	$(CC) src/HashMap.c src/HashMap.h examples/HashMapMain.c -o HashMapEx
-	$(CC) src/SinglyLinkedList.c src/SinglyLinkedList.h examples/SinglyLinkedListMain.c -o SinglyLinkedListEx
+	$(CC) lib/HashMap.c lib/HashMap.h examples/HashMapMain.c -o HashMapEx
+	$(CC) lib/SinglyLinkedList.c lib/SinglyLinkedList.h examples/SinglyLinkedListMain.c -o SinglyLinkedListEx
 
 clean:
 	$(RM) SinglyLinkedListEx HashMapEx
