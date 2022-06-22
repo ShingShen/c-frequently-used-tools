@@ -7,7 +7,7 @@
 typedef struct Node {
     int data;
     struct Node* next;
-} Node;
+} SinglyLinkedList;
 
 extern void append();
 extern void deletePos();

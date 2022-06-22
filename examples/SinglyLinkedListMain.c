@@ -1,7 +1,7 @@
 #include "../lib/SinglyLinkedList.h"
 
 int main(void) {
-    Node* head = NULL;
+    SinglyLinkedList* head = NULL;
     puts("Create Linked List:");
     append(&head, 10);
     append(&head, 20);
