@@ -1,6 +1,6 @@
 #include "SinglyLinkedList.h"
 
-void append(struct Node** head_ref, int new_data)
+void sllAdd(struct Node** head_ref, int new_data)
 {
     struct Node* new_node = (struct Node*)malloc(sizeof(struct Node));
     struct Node* last = *head_ref;
@@ -22,7 +22,7 @@ void append(struct Node** head_ref, int new_data)
     return;
 }
 
-void deletePos(struct Node** head_ref, int pos)
+void sllDeletePos(struct Node** head_ref, int pos)
 {
     struct Node* temp = *head_ref;
     int i;
@@ -42,7 +42,7 @@ void deletePos(struct Node** head_ref, int pos)
     return;
 }
 
-void printList(struct Node* node)
+void sllPrintList(struct Node* node)
 {
     while (node != NULL) {
         printf(" %d ", node->data);

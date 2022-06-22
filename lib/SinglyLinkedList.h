@@ -9,8 +9,8 @@ typedef struct Node {
     struct Node* next;
 } SinglyLinkedList;
 
-extern void append();
-extern void deletePos();
-extern void printList();
+extern void sllAdd();
+extern void sllDeletePos();
+extern void sllPrintList();
 
 #endif
