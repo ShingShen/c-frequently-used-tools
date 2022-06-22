@@ -22,12 +22,12 @@ void append(struct Node** head_ref, int new_data)
     return;
 }
 
-void deletePos(int pos)
+void deletePos(struct Node** head_ref, int pos)
 {
-    struct Node* temp = head;
+    struct Node* temp = *head_ref;
     int i;
     if (pos == 0) {
-        head = head->next;
+        *head_ref = (*head_ref)->next;
         temp->next = NULL;
         free(temp);
     } else {

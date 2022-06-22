@@ -1,6 +1,7 @@
 #include "../lib/SinglyLinkedList.h"
 
 int main(void) {
+    struct Node* head = NULL;
     puts("Create Linked List:");
     append(&head, 10);
     append(&head, 20);
@@ -10,10 +11,10 @@ int main(void) {
     append(&head, 60);
     append(&head, 70);
     printList(head);
-    deletePos(3);
+    deletePos(&head, 3);
     puts("\n\nLinked List after Deletion of position 3:");
     printList(head);
-    deletePos(0);
+    deletePos(&head, 0);
     puts("\n\nLinked List after Deletion of position 0:");
     printList(head);
     printf("\n");
